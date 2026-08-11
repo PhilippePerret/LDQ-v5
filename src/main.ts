@@ -5,6 +5,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.useStaticAssets(join(__dirname, '..', 'public'), { index: false });
   app.setBaseViewsDir(join(__dirname, 'views'));
   app.setViewEngine('hbs');
   await app.listen(process.env.PORT ?? 47291);

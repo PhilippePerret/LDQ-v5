@@ -43,5 +43,5 @@ jobs:
 
       - name: Restart site via AlwaysData API
         run: |
-          curl --fail --basic --user "${{ secrets.ALWAYSDATA_API_KEY }}:" \
+          curl --fail -X POST --basic --user "${{ secrets.ALWAYSDATA_API_KEY }} account=icare:" \
             "https://api.alwaysdata.com/v1/site/${{ secrets.ALWAYSDATA_SITE_LDQ_ID }}/restart/"

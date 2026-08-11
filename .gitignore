@@ -8,3 +8,8 @@ tmp/
 
 temp/
 
+node_modules/
+dist/
+coverage/
+*.log
+

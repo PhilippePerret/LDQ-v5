@@ -1,0 +1,27 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  color: #222;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #2255aa;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  border-bottom: 2px solid #2255aa;
+  padding-bottom: 0.5rem;
+}

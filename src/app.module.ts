@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { ServeStaticModule } from '@nestjs/serve-static';
 import {
   AcceptLanguageResolver,
   I18nModule,
@@ -11,9 +10,6 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-    }),
     I18nModule.forRoot({
       fallbackLanguage: 'fr',
       loaderOptions: {

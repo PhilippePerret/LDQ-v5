@@ -9,7 +9,9 @@ import {
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
 import { HealthCheck } from './database/entities/health-check.entity';
+import { User } from './database/entities/user.entity';
 
 @Module({
   imports: [
@@ -20,10 +22,11 @@ import { HealthCheck } from './database/entities/health-check.entity';
       useFactory: (config: ConfigService) => ({
         type: 'postgres' as const,
         url: config.get<string>('DATABASE_URL'),
-        entities: [HealthCheck],
+        entities: [HealthCheck, User],
         synchronize: false,
       }),
     }),
+    AuthModule,
     I18nModule.forRoot({
       fallbackLanguage: 'fr',
       loaderOptions: {

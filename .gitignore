@@ -1,5 +1,7 @@
 .DS_Store
 
+.claude/
+
 _dev/
 
 dev/
@@ -12,4 +14,6 @@ node_modules/
 dist/
 coverage/
 *.log
+
+.env
 

@@ -23,6 +23,7 @@ jobs:
           --health-retries 5
     env:
       DATABASE_URL: postgres://ldq:ldq@localhost:5432/ldq
+      JWT_SECRET: test_secret
     steps:
       - uses: actions/checkout@v4
 
